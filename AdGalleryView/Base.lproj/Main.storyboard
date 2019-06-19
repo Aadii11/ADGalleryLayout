@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6pe-7l-B5h">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Ad CollectionviewVC-->
+        <scene sceneID="sU9-PZ-i0O">
+            <objects>
+                <viewController storyboardIdentifier="AdCollectionviewVC" id="6pe-7l-B5h" customClass="AdCollectionviewVC" customModule="AdGalleryView" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1Hy-6Y-mFM">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="w6G-Ta-m9H">
+                                <rect key="frame" x="0.0" y="5" width="414" height="896"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="le5-Oe-fMI">
+                                    <size key="itemSize" width="167" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="AdLayoutCCell" id="Y6x-K8-eEl" customClass="AdLayoutCCell" customModule="AdGalleryView" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="167" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="167" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="abc" translatesAutoresizingMaskIntoConstraints="NO" id="w3v-CI-u8a">
+                                                    <rect key="frame" x="0.0" y="0.0" width="167" height="128"/>
+                                                </imageView>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="w3v-CI-u8a" firstAttribute="centerX" secondItem="Y6x-K8-eEl" secondAttribute="centerX" id="4k1-Ai-7lZ"/>
+                                            <constraint firstItem="w3v-CI-u8a" firstAttribute="height" secondItem="Y6x-K8-eEl" secondAttribute="height" id="JAj-5H-7d4"/>
+                                            <constraint firstItem="w3v-CI-u8a" firstAttribute="width" secondItem="Y6x-K8-eEl" secondAttribute="width" id="cjm-rS-Ey5"/>
+                                            <constraint firstItem="w3v-CI-u8a" firstAttribute="centerY" secondItem="Y6x-K8-eEl" secondAttribute="centerY" id="mu9-rb-SYa"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="imgDisplay" destination="w3v-CI-u8a" id="tdr-R6-mgt"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="6pe-7l-B5h" id="SZn-Bq-CsW"/>
+                                    <outlet property="delegate" destination="6pe-7l-B5h" id="DFb-i5-pqF"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="w6G-Ta-m9H" firstAttribute="width" secondItem="1Hy-6Y-mFM" secondAttribute="width" id="I2M-Tk-Sac"/>
+                            <constraint firstItem="w6G-Ta-m9H" firstAttribute="centerX" secondItem="bua-VC-JA1" secondAttribute="centerX" id="SC0-5s-W8J"/>
+                            <constraint firstItem="w6G-Ta-m9H" firstAttribute="centerY" secondItem="bua-VC-JA1" secondAttribute="centerY" id="V7X-Hq-Eyo"/>
+                            <constraint firstItem="w6G-Ta-m9H" firstAttribute="height" secondItem="1Hy-6Y-mFM" secondAttribute="height" id="hHh-NT-5Sn"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="bua-VC-JA1"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pVI-IG-gRz" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="897" y="110"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="abc" width="1269" height="846"/>
+    </resources>
+</document>
