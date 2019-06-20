@@ -65,19 +65,21 @@ extension AdCollectionviewVC: UICollectionViewDelegateFlowLayout
             patteren += 1
             return CGSize(width: yourWidth, height: yourHeight)
         }
-        else if patteren == 5
+        else
         {
             let yourWidth = collectionView.bounds.width
             let yourHeight = collectionView.bounds.width / 2
             patteren = 0
             return CGSize(width: yourWidth, height: yourHeight)
         }
-        else
-        {
-            let yourWidth = collectionView.bounds.width/2.02
-            let yourHeight = yourWidth
-            return CGSize(width: yourWidth, height: yourHeight)
-        }
+        
+        // To create both image of same size
+//        else
+//        {
+//            let yourWidth = collectionView.bounds.width/2.02
+//            let yourHeight = yourWidth
+//            return CGSize(width: yourWidth, height: yourHeight)
+//        }
         
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
